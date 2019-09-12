@@ -22,11 +22,9 @@ stages:
     steps:
       - task: Docker@2
         inputs:
-          containerRegistry: 'docker'
-          repository: 'mihasic/blazor-dev-container'
-          command: 'buildAndPush'
+          containerRegistry: docker
+          repository: mihasic/blazor-dev-container
+          command: buildAndPush
           tags: |
             $(Build.BuildId)
             latest
-              dockerfile: '**/Dockerfile'
-              tags: latest
