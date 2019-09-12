@@ -29,5 +29,4 @@ stages:
             $(Build.BuildId)
             latest
               dockerfile: '**/Dockerfile'
-              tags: |
-                $(tag)
+              tags: latest
